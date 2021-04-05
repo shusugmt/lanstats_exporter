@@ -9,6 +9,8 @@ jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
+      - name: Install libpcap
+        run: sudo apt-get install libpcap-dev
       - name: Checkout
         uses: actions/checkout@v2
         with:
