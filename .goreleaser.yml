@@ -15,6 +15,7 @@ builds:
       - -X github.com/prometheus/common/version.Branch={{.Branch}}
       - -X github.com/prometheus/common/version.BuildUser=goreleaser
       - -X github.com/prometheus/common/version.BuildDate={{.CommitDate}}
+      - -extldflags=-static
 archives:
   - replacements:
       darwin: Darwin
